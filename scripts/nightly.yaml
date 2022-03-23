@@ -32,6 +32,8 @@ stages:
         targetPath: $(Build.ArtifactStagingDirectory)
         artifactName: 'Windows32'
 
+- stage: Package
+  jobs:
   - job: NuGet32
     displayName: "NuGet 32 packaging"
     pool:
@@ -134,7 +136,6 @@ stages:
       inputs:
         targetPath: $(Build.ArtifactStagingDirectory)
         artifactName: 'NuGet32'
-
         
 - stage: NugetPublishNightly
   jobs:
