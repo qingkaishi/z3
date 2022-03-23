@@ -158,7 +158,7 @@ stages:
       displayName: 'NuGet Nightly x86 push'
       inputs:
         command: push
-        publishVstsFeed: 'Z3-Public-Nightly'
+        publishVstsFeed: 'Z3Nightly'
         packagesToPush: $(Agent.TempDirectory)/x86/*.nupkg
         allowPackageConflicts: true
 
